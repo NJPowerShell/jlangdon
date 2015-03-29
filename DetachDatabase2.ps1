@@ -15,8 +15,8 @@
 	#Set data file properties
 		foreach ($database in $dbs)
 	{
-		if ($database.IsSystemObject -eq $False -and $database.name -notlike "ReportServer*")
-		#if ($database.name -like "JLTest")
+		#if ($database.IsSystemObject -eq $False -and $database.name -notlike "ReportServer*")
+		if ($database.name -like "DeltekTE")
 			{
 			    $database.UserAccess = "Single"
 			    $server.KillAllProcesses($database.name)
